@@ -57,3 +57,24 @@ Robinson Hotel Management is a desktop application built in Java (using JavaFX) 
 ├── pom.xml                  # Maven build and dependency configuration
 ├── .gitignore              # Specifies files/folders ignored by Git
 └── .gitattributes          # Git attributes configuration
+
+
+- **Java packages / classes** handle business logic (controllers), data models (entities), persistence (DAO layer), and UI (FXML / JavaFX controllers).  
+- **Resources** include FXML layouts, CSS styling, and other UI assets.  
+- **pom.xml** defines dependencies, build lifecycle, Java version, etc.  
+
+---
+
+## Setup & Installation
+
+1. **Prerequisites**  
+   - Java Development Kit (JDK) 17+  
+   - MySQL server running  
+   - Maven installed (or use the provided Maven wrapper)  
+
+2. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/IsmailMechkene/Robinson-Hotel-Management.git
+   cd Robinson-Hotel-Management
+
