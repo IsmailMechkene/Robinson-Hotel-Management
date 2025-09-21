@@ -44,8 +44,18 @@ Robinson Hotel Management is a desktop application built in Java (using JavaFX) 
 
 ## Architecture & Structure
 
-/
-├── .idea/ ← IDE configuration files
+/  
+├── .idea/ ← IDE configuration files  
+├── mvn/ wrapper / mvnw / mvnw.cmd ← Maven wrappers  
+├── javafx-sdk-24/ ← JavaFX SDK (bundled)  
+├── mysql-connector-j-9.2.0/ ← JDBC driver for MySQL  
+├── src/  
+│ └── main/  
+│ ├── java/ ← Java source code  
+│ └── resources/ ← Static resources (FXML, CSS, images, etc.)  
+├── pom.xml ← Maven build and dependency file  
+├── .gitignore ← Files/folders to be ignored by Git  
+└── .gitattributes ← Git attributes config  
 
 
 - **Java packages / classes** handle business logic (controllers), data models (entities), persistence (DAO layer), and UI (FXML / JavaFX controllers).  
