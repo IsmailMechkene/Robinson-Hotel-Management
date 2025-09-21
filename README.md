@@ -136,3 +136,23 @@ Robinson Hotel Management is a desktop application built in Java (using JavaFX) 
 3. Add new Admin accounts, edit their details, or remove them.
 
 
+##Contributing
+
+Contributions are welcome! If you’d like to improve this project, please follow these steps:
+1. Fork the repository.
+2. Create a feature branch: git checkout -b feature/my-new-feature.
+3. Commit your changes with clear messages.
+4. Push to your fork and open a Pull Request.
+
+Some ideas for enhancements:
+- Add reporting dashboards (occupancy rates, revenue statistics)
+- Implement role-based access control (Admin, Staff, Receptionist)
+- Add data export/import (CSV / Excel)
+- Improve UI polish / theme (modern styling, icons)
+- Add unit/integration tests
+
+##Author
+
+**Ismail Mechkene**
+- GitHub: @IsmailMechkene
+- Contact: [Your email or contact info here]
