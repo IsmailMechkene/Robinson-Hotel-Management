@@ -57,6 +57,7 @@ Robinson Hotel Management is a desktop application built in Java (using JavaFX) 
 ├── .gitignore ← Files/folders to be ignored by Git  
 └── .gitattributes ← Git attributes config  
 
+  
 
 - **Java packages / classes** handle business logic (controllers), data models (entities), persistence (DAO layer), and UI (FXML / JavaFX controllers).  
 - **Resources** include FXML layouts, CSS styling, and other UI assets.  
