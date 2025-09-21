@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guijavaproject.ClientsController">
+
+    <left>
+        <VBox alignment="CENTER" spacing="20" style="-fx-background-color: #6C5B7B; -fx-padding: 20px; -fx-pref-width: 250px;">
+            
+            <ImageView fx:id="brandingImageView" fitHeight="183.0" fitWidth="216.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../../../../../Images/RobinsonLogo.png" />
+                </image>
+            </ImageView>
+            
+            <Button fx:id="btnReservations" onAction="#DashboardButtonAction" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 16px; -fx-pref-width: 200px;" text="🏠 Dashboard" />
+            
+            <Button fx:id="btnClients" onAction="#ReservationsButtonAction" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 16px; -fx-pref-width: 200px;" text="📅 Reservations" />
+            
+            <Button fx:id="btnRooms" onAction="#ClientsButtonAction" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 16px; -fx-pref-width: 200px;" text="👤 Clients">
+            <effect>
+               <Glow level="1.0" />
+            </effect></Button>
+            
+            <Button fx:id="btnBilling" onAction="#RoomsButtonAction" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 16px; -fx-pref-width: 200px;" text="🛏 Rooms" />
+            
+            <Button fx:id="logoutButton" onAction="#LogoutButtonAction" style="-fx-background-color: #F67280; -fx-text-fill: white; -fx-font-size: 16px; -fx-pref-width: 200px; -fx-background-radius: 10px;" text="🚪 Log Out" />
+        </VBox>
+    </left>
+
+    <top>
+        <HBox alignment="CENTER_RIGHT" spacing="20" style="-fx-background-color: #355C7D; -fx-padding: 15px;">
+            <Label fx:id="dateLabel" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="34.0" prefWidth="870.0" textFill="WHITE" translateX="-8.0">
+                <font>
+                    <Font name="System Bold" size="19.0" />
+                </font>
+            </Label>
+         <Button fx:id="reportButton" focusTraversable="false" onAction="#ReportButtonAction" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 16px; -fx-pref-width: 200px;" text="⚠ Report a problem" />
+
+            <Label prefHeight="25.0" prefWidth="128.0" style="-fx-text-fill: white; -fx-font-size: 16px;" text="👤 Receptionist" />
+
+        </HBox>
+
+    </top>
+
+    <center>
+        <StackPane fx:id="contentArea" style="-fx-padding: 30; -fx-background-color: #F67280;">
+         <children>
+            <BorderPane prefHeight="555.0" prefWidth="891.0" StackPane.alignment="TOP_LEFT">
+               <top>
+                  <AnchorPane prefHeight="121.0" prefWidth="964.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label layoutX="276.0" text="CLIENTS MANAGEMENT" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="36.0" />
+                           </font>
+                           <effect>
+                              <Glow level="0.8" />
+                           </effect>
+                        </Label>
+                        <CheckBox fx:id="filterReservationsCheckBox" layoutX="794.0" layoutY="130.0" mnemonicParsing="false" onAction="#toggleReservationFilter" text="Show regular clients only" textFill="WHITE" />
+                        <Button fx:id="btnManageClients" layoutX="391.0" layoutY="61.0" mnemonicParsing="false" onAction="#manageClientsButtonAction" style="-fx-background-color: #e96370;" text="MANAGE CLIENTS" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <bottom>
+                  <TableView fx:id="clientTable" prefWidth="964.0" style="-fx-background-color: #e96370;" BorderPane.alignment="CENTER">
+                    <columns>
+                        <TableColumn fx:id="cinColumn" prefWidth="143.0" style="-fx-background-color: #f2a6ad; -fx-text-fill: #ffffff; -fx-alignment: CENTER; -fx-font-size: 16px;" text="CIN" />
+
+                        <TableColumn fx:id="firstNameColumn" prefWidth="174.0" style="-fx-background-color: #f2a6ad; -fx-text-fill: #ffffff; -fx-alignment: CENTER; -fx-font-size: 16px;" text="First Name" />
+
+                        <TableColumn fx:id="lastNameColumn" prefWidth="179.0" style="-fx-background-color: #f2a6ad; -fx-text-fill: #ffffff; -fx-alignment: CENTER; -fx-font-size: 16px;" text="Last Name" />
+
+                        <TableColumn fx:id="addressColumn" prefWidth="302.0" style="-fx-background-color: #f2a6ad; -fx-text-fill: #ffffff; -fx-alignment: CENTER; -fx-font-size: 16px;" text="Address" />
+
+                        <TableColumn fx:id="phoneColumn" prefWidth="166.0" style="-fx-background-color: #f2a6ad; -fx-text-fill: #ffffff; -fx-alignment: CENTER; -fx-font-size: 16px;" text="Phone Number" />
+                    </columns>
+                  </TableView>
+               </bottom>
+            </BorderPane>
+         </children></StackPane>
+    </center>
+
+    <bottom>
+        <Label prefHeight="40.0" prefWidth="1292.0" style="-fx-padding: 10px; -fx-background-color: #355C7D; -fx-text-fill: white; -fx-font-size: 14px;" text="🏨 Hotel Management System - Connected" />
+    </bottom>
+
+</BorderPane>

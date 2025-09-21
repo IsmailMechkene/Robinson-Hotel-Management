@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="825.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guijavaproject.RegisterController">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="212.0" style="-fx-background-color: #355C7D;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="brandingImageView" fitHeight="200.0" fitWidth="201.0" layoutX="6.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Robinson_Club_Logo-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Text fill="#f5f5f5" layoutX="18.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HOTEL BOOKING" textAlignment="CENTER" wrappingWidth="176.271484375">
+               <font>
+                  <Font name="Baskerville Old Face" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="#f5f5f5" layoutX="30.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MANAGEMENT" textAlignment="CENTER" wrappingWidth="151.271484375">
+               <font>
+                  <Font name="Baskerville Old Face" size="14.0" />
+               </font>
+            </Text>
+            <AnchorPane layoutX="215.0" prefHeight="400.0" prefWidth="610.0" snapToPixel="false" style="-fx-background-color: #F67280;">
+               <children>
+                  <ImageView fx:id="registerImageView" fitHeight="121.0" fitWidth="165.0" layoutX="223.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@360_F_454102895_9HaAo07nq3SZnQmZQgQTrDxncIEojsbH-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="19.0" layoutY="167.0" text="Username" textOverrun="CLIP">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="usernameTextField" layoutX="109.0" layoutY="167.0" prefHeight="25.0" prefWidth="176.0" promptText="Username" AnchorPane.bottomAnchor="208.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+                  <TextField fx:id="firstNameTextField" layoutX="109.0" layoutY="207.0" prefHeight="25.0" prefWidth="176.0" promptText="First name" />
+                  <Button fx:id="cancel" layoutX="315.0" layoutY="334.0" mnemonicParsing="false" onAction="#switchToLoginPage" prefHeight="25.0" prefWidth="265.0" style="-fx-background-color: #6C5B7B;" text="Back" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="login" layoutX="30.0" layoutY="334.0" mnemonicParsing="false" onAction="#RegisterButtonAction" prefHeight="25.0" prefWidth="265.0" style="-fx-background-color: #6C5B7B;" text="Register" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="RegisterMessageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="41.0" layoutY="287.0" prefHeight="34.0" prefWidth="529.0" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+                     <font>
+                        <Font name="Cascadia Code Regular" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="lastNameTextField" layoutX="109.0" layoutY="244.0" prefHeight="25.0" prefWidth="176.0" promptText="Last name" />
+                  <Label layoutX="20.0" layoutY="128.0" text="CIN" textOverrun="CLIP">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="cinTextField" layoutX="109.0" layoutY="128.0" prefHeight="25.0" prefWidth="176.0" promptText="CIN">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+                  <Label layoutX="310.0" layoutY="170.0" text="Phone" textOverrun="CLIP">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="phoneTextField" layoutX="399.0" layoutY="167.0" prefHeight="25.0" prefWidth="176.0" promptText="Phone number: xxxxxxxxx">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+                  <Label layoutX="310.0" layoutY="210.0" text="Address" textOverrun="CLIP">
+                     <font>
+                        <Font name="Arial" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="310.0" layoutY="130.0" text="Email" textOverrun="CLIP">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="emailTextField" layoutX="399.0" layoutY="128.0" prefHeight="25.0" prefWidth="176.0" promptText="example@example.exp">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+                  <TextField fx:id="addressTextField" layoutX="399.0" layoutY="205.0" prefHeight="25.0" prefWidth="176.0" promptText="Address" />
+                  <Label layoutX="310.0" layoutY="246.0" text="Password" textOverrun="CLIP">
+                     <font>
+                        <Font name="Arial" size="17.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="passwordField" layoutX="399.0" layoutY="244.0" prefHeight="25.0" prefWidth="176.0" promptText="Password" />
+                  <Label layoutX="19.0" layoutY="206.0" text="First name" textOverrun="CLIP">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="19.0" layoutY="243.0" text="Last name" textOverrun="CLIP">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>

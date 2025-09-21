@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guijavaproject.RoomsManagementController">
+
+    <left>
+        <VBox alignment="CENTER" spacing="20" style="-fx-background-color: #6C5B7B; -fx-padding: 20px; -fx-pref-width: 250px;">
+            
+            <ImageView fx:id="brandingImageView" fitHeight="183.0" fitWidth="216.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../../../../../Images/RobinsonLogo.png" />
+                </image>
+            </ImageView>
+            
+            <Button fx:id="btnReservations" onAction="#DashboardButtonAction" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 16px; -fx-pref-width: 200px;" text="🏠 Dashboard" />
+            
+            <Button fx:id="btnClients" onAction="#ReservationsButtonAction" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 16px; -fx-pref-width: 200px;" text="📅 Reservations" />
+            
+            <Button fx:id="btnRooms" onAction="#ClientsButtonAction" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 16px; -fx-pref-width: 200px;" text="👤 Clients" />
+            
+            <Button fx:id="btnBilling" onAction="#RoomsButtonAction" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 16px; -fx-pref-width: 200px;" text="🛏 Rooms">
+            <effect>
+               <Glow level="1.0" />
+            </effect></Button>
+            
+            <Button fx:id="logoutButton" onAction="#LogoutButtonAction" style="-fx-background-color: #F67280; -fx-text-fill: white; -fx-font-size: 16px; -fx-pref-width: 200px; -fx-background-radius: 10px;" text="🚪 Log Out" />
+        </VBox>
+    </left>
+
+    <top>
+        <HBox alignment="CENTER_RIGHT" spacing="20" style="-fx-background-color: #355C7D; -fx-padding: 15px;">
+            <Label fx:id="dateLabel" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="34.0" prefWidth="870.0" textFill="WHITE" translateX="-8.0">
+                <font>
+                    <Font name="System Bold" size="19.0" />
+                </font>
+            </Label>
+         <Button fx:id="reportButton" focusTraversable="false" onAction="#ReportButtonAction" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 16px; -fx-pref-width: 200px;" text="⚠ Report a problem" />
+            
+            <Label prefHeight="25.0" prefWidth="128.0" style="-fx-text-fill: white; -fx-font-size: 16px;" text="👤 Receptionist" />
+        </HBox>
+    </top>
+
+    <center>
+        <StackPane fx:id="contentArea" style="-fx-padding: 30; -fx-background-color: #F67280;">
+         <children>
+            <BorderPane prefHeight="555.0" prefWidth="891.0" StackPane.alignment="TOP_LEFT">
+               <left>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="555.0" prefWidth="468.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label layoutX="143.0" layoutY="87.0" text="ADD ROOM" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="30.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="88.0" layoutY="310.0" mnemonicParsing="false" onAction="#addRoomButtonAction" prefHeight="35.0" prefWidth="295.0" style="-fx-background-color: #e96370;" text="Add room" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="16.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="AddRoomLabel" alignment="CENTER" layoutX="48.0" layoutY="364.0" prefHeight="73.0" prefWidth="375.0" textAlignment="CENTER" textFill="#355c7d" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="addStatus" layoutX="248.0" layoutY="253.0" prefHeight="25.0" prefWidth="136.0" />
+                        <Label layoutX="87.0" layoutY="252.0" text="Status" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="addBedsNumber" layoutX="248.0" layoutY="215.0" prefHeight="25.0" prefWidth="136.0" />
+                        <Label layoutX="87.0" layoutY="214.0" text="Number of beds" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="47.0" layoutY="437.0" prefHeight="104.0" prefWidth="375.0" text="⚠ To update room status, please insert 'D' for available, 'I' for occupied or 'R' for rooms under construction" textAlignment="JUSTIFY" textFill="#355c7d" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="555.0" prefWidth="468.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label layoutX="102.0" layoutY="87.0" text="MODIFY ROOM" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="30.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="ModifyRoomLabel" alignment="CENTER" layoutX="80.0" layoutY="409.0" prefHeight="72.0" prefWidth="304.0" textFill="#355c7d" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                        <TextField fx:id="modifyBedsNumber" layoutX="154.0" layoutY="297.0" prefHeight="25.0" prefWidth="78.0" />
+                        <Label layoutX="12.0" layoutY="296.0" text="Number of beds" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="257.0" layoutY="296.0" text="Status" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="11.0" layoutY="341.0" mnemonicParsing="false" onAction="#modifyRoomCapacityButtonAction" prefHeight="35.0" prefWidth="221.0" style="-fx-background-color: #e96370;" text="Update room capacity" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="16.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="modifyStatus" layoutX="320.0" layoutY="297.0" prefHeight="25.0" prefWidth="136.0" />
+                        <Button layoutX="256.0" layoutY="341.0" mnemonicParsing="false" onAction="#modifyRoomStatusButtonAction" prefHeight="35.0" prefWidth="201.0" style="-fx-background-color: #e96370;" text="Update room status" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="16.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" layoutX="83.0" layoutY="506.0" mnemonicParsing="false" onAction="#RoomsButtonAction" prefHeight="35.0" prefWidth="297.0" style="-fx-background-color: #e96370;" text="Go back" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="16.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="modifyRoomId" layoutX="213.0" layoutY="214.0" prefHeight="25.0" prefWidth="136.0" />
+                        <Label layoutX="115.0" layoutY="213.0" text="Room ID" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children></StackPane>
+    </center>
+
+    <bottom>
+        <Label prefHeight="40.0" prefWidth="1292.0" style="-fx-padding: 10px; -fx-background-color: #355C7D; -fx-text-fill: white; -fx-font-size: 14px;" text="🏨 Hotel Management System - Connected" />
+    </bottom>
+
+</BorderPane>
