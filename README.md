@@ -160,4 +160,4 @@ Some ideas for enhancements:
 
 **Ismail Mechkene**
 - GitHub: @IsmailMechkene
-- Contact: [Your email or contact info here]
+- Contact: ismail.mechkene@etudiant-fst.utm.tn
