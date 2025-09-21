@@ -78,3 +78,59 @@ Robinson Hotel Management is a desktop application built in Java (using JavaFX) 
    git clone https://github.com/IsmailMechkene/Robinson-Hotel-Management.git
    cd Robinson-Hotel-Management
 
+3. **Configure the database
+
+- Create a MySQL database, e.g. robinson_hotel_db.
+- Set up tables (rooms, guests, bookings, etc.).
+- Update database credentials in the code (username/password and JDBC URL).
+
+4. **Build the project
+
+   ```bash
+   mvn clean install
+
+5. **Run the application
+
+- From IDE: Run the main class.
+- Or via command line:
+   ```bash
+   mvn exec:java -Dexec.mainClass="your.main.ClassName"
+
+## Usage
+
+### User Roles
+
+- **Admin**  
+  - Manage **clients** (add, edit, delete).  
+  - Manage **rooms** (add, edit, delete, update status).  
+  - Manage **reservations** (create, edit, cancel).  
+  - Handles day-to-day hotel operations.  
+
+- **Super Admin**  
+  - Has all Admin permissions.  
+  - Additionally, can **create, manage, and remove Admin accounts**.  
+  - Responsible for high-level user management and overall control of the system.  
+
+---
+
+### Common Workflows
+
+#### Managing Clients
+1. Log in as **Admin** or **Super Admin**.  
+2. Navigate to the **Clients** section.  
+3. Add a new client or update existing details.  
+
+#### Managing Rooms
+1. Go to the **Rooms** section.  
+2. Add new rooms with number, type, and price.  
+3. Update availability or modify existing room details.  
+
+#### Managing Reservations
+1. Navigate to the **Reservations** section.  
+2. Create a reservation by selecting a client and an available room.  
+3. Modify or cancel reservations as needed.  
+
+#### Managing Admins (Super Admin only)
+1. Log in as **Super Admin**.  
+2. Navigate to the **Admin Management** section.  
+3. Add new Admin accounts, edit their details, or remove them.  
