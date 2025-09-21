@@ -78,18 +78,18 @@ Robinson Hotel Management is a desktop application built in Java (using JavaFX) 
    git clone https://github.com/IsmailMechkene/Robinson-Hotel-Management.git
    cd Robinson-Hotel-Management
 
-3. **Configure the database
+3. **Configure the database**
 
 - Create a MySQL database, e.g. robinson_hotel_db.
 - Set up tables (rooms, guests, bookings, etc.).
 - Update database credentials in the code (username/password and JDBC URL).
 
-4. **Build the project
+4. **Build the project**
 
    ```bash
    mvn clean install
 
-5. **Run the application
+5. **Run the application**
 
 - From IDE: Run the main class.
 - Or via command line:
@@ -133,4 +133,6 @@ Robinson Hotel Management is a desktop application built in Java (using JavaFX) 
 #### Managing Admins (Super Admin only)
 1. Log in as **Super Admin**.  
 2. Navigate to the **Admin Management** section.  
-3. Add new Admin accounts, edit their details, or remove them.  
+3. Add new Admin accounts, edit their details, or remove them.
+
+
