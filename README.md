@@ -96,6 +96,8 @@ Robinson Hotel Management is a desktop application built in Java (using JavaFX) 
    ```bash
    mvn exec:java -Dexec.mainClass="your.main.ClassName"
 
+---
+
 ## Usage
 
 ### User Roles
@@ -135,8 +137,9 @@ Robinson Hotel Management is a desktop application built in Java (using JavaFX) 
 2. Navigate to the **Admin Management** section.  
 3. Add new Admin accounts, edit their details, or remove them.
 
+---
 
-##Contributing
+## Contributing
 
 Contributions are welcome! If you’d like to improve this project, please follow these steps:
 1. Fork the repository.
@@ -151,7 +154,9 @@ Some ideas for enhancements:
 - Improve UI polish / theme (modern styling, icons)
 - Add unit/integration tests
 
-##Author
+---
+
+## Author
 
 **Ismail Mechkene**
 - GitHub: @IsmailMechkene
