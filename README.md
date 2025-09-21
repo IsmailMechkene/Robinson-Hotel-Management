@@ -11,10 +11,8 @@ Robinson Hotel Management is a desktop application built in Java (using JavaFX) 
 3. [Architecture & Structure](#architecture--structure)  
 4. [Setup & Installation](#setup--installation)  
 5. [Usage](#usage)  
-6. [Screenshots / UI Flow](#screenshots--ui-flow)  
-7. [Contributing](#contributing)  
-8. [Author](#author)  
-9. [License](#license)  
+6. [Contributing](#contributing)  
+7. [Author](#author)  
 
 ---
 
